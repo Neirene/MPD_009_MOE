@@ -1,0 +1,6 @@
+node_modules/
+assets/bower_components
+.sass-cache
+assets/css/compiled_sass.css
+image_sources
+myfiles/

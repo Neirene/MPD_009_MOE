@@ -1,0 +1,9 @@
+{
+  "name": "neimoe-theme",
+  "version": "1.0.0",
+  "dependencies": {
+    "highlightjs": "^9.6.0",
+    "packery": "^2.1.1",
+    "slick-carousel": "^1.6.0"
+  }
+}
