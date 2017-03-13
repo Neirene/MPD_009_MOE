@@ -334,28 +334,6 @@ Railscasts-like style (c) Visoft, Inc. (Damien White)
   opacity: 0.75; }
 
 /* ==========================================================================
-   Table of Contents
-   ========================================================================== */
-/*
-
-    0.  Normalize
-    1.  Icons
-    2.  General
-    3.  Utilities
-    4.  General
-    5.  Single Post
-    6.  Author Profile
-    7.  Read More
-    8.  Third Party Elements
-    9.  Pagination
-    10. Subscribe
-    11. Footer
-    12. Media Queries (Tablet)
-    13. Media Queries (Mobile)
-    14. Animations
-
-*/
-/* ==========================================================================
    0. normalize.css v3.0.3 | MIT License | git.io/normalize | (minified)
    ========================================================================== */
 html {
@@ -506,6 +484,31 @@ table {
 td, th {
   padding: 0; }
 
+/* ==========================================================================
+   Table of Contents
+   ========================================================================== */
+/*
+
+    0.  Normalize
+    1.  Icons
+    2.  General
+    3.  Utilities
+    4.  General
+    5.  Single Post
+    6.  Author Profile
+    7.  Read More
+    8.  Third Party Elements
+    9.  Pagination
+    10. Subscribe
+    11. Footer
+    12. Media Queries (Tablet)
+    13. Media Queries (Mobile)
+    14. Animations
+
+*/
+/* ==========================================================================
+   0. normalize.css v3.0.3 | MIT License | git.io/normalize | (minified)
+   ========================================================================== */
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
    ========================================================================== */
@@ -2257,3 +2260,120 @@ body.page-template .post-title {
    End of file. Animations should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
    ========================================================================== */
+.landing-container {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden; }
+
+.copy-wrapper {
+  position: absolute;
+  display: block;
+  z-index: 100;
+  width: inherit;
+  bottom: 20px;
+  text-align: center; }
+
+.start-wrapper {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  z-index: 100; }
+
+.start-wrapper > h1 {
+  color: #bdfaff;
+  text-shadow: 0px 0px 10px 0px #00baff;
+  cursor: pointer; }
+
+.logo-wrapper {
+  background-color: lightskyblue;
+  width: 100%;
+  height: 100%; }
+
+.logo-wrapper svg {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%; }
+
+.cls-1 {
+  fill: none; }
+
+.cls-2 {
+  -webkit-clip-path: url(#clip-path);
+          clip-path: url(#clip-path); }
+
+.cls-3 {
+  fill: #fb68aa; }
+
+.cls-4 {
+  fill: #20a4d2; }
+
+.cls-off {
+  fill: grey; }
+
+.slice1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(100% 0, 0 0, 0% 100%);
+          clip-path: polygon(100% 0, 0 0, 0% 100%);
+  z-index: 50; }
+
+.slice1 svg {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%; }
+
+.slice2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  right: 0%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(100% 0, 100% 100%, 0% 100%);
+  z-index: 50; }
+
+.slice2 svg {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%; }
+
+.inner-bar-left {
+  background-color: white;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: height 800ms cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition: height 800ms cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+.inner-bar-right {
+  background-color: white;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  -webkit-transition: height 800ms cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition: height 800ms cubic-bezier(0.215, 0.61, 0.355, 1); }
