@@ -6,6 +6,27 @@
 (function ($, undefined) {
     "use strict";
     console.log("theme settings initialized...");
+
+    /*$('.slick-container').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 1000,
+    });
+
+/*
+var tl = new TimelineMax({repeat: -1});
+tl.to(".logo-bg-stripe", 2200, {
+    backgroundPosition: "600px 0px",
+    force3D:true,
+    rotation:0.00,
+    z:0.00,
+    autoRound:false,
+    ease: Linear.easeNone
+    });
+*/
+
+
     var $document = $(document);
 
     $document.ready(function () {
