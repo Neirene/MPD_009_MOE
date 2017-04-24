@@ -3,13 +3,52 @@
 
 <div class="landing-container">
 
+<!--UNIVERSAL COMPONENT: Loading Area-->
+<div class="loading-screen">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" width="391.8" height="53.94" viewBox="0 0 391.8 60">
+  <defs>
+    <style>
+      .ld-1 {
+        fill: #ff7bac;
+      }
 
-<div class="loading-container"><h1>NOW LOADING...</h1></div>
+      .ld-2 {
+        fill: #3fa9f5;
+      }
+    </style>
+  </defs>
+  <title>loading placeholder</title>
+  <g id="loading-caption" data-name="Layer 1">
+    <g>
+      <path class="ld-1" d="M36.47,40.79H32.55q-3.75,0-5.07-1.38T26.21,34V17.69H7.72V40.85H.4v-29H7.72v4.55a6.54,6.54,0,0,1,6.57-4.55H25q8.64,0,8.64,8.87V34.92h2.82Z"/>
+      <path class="ld-1" d="M73.11,32.78q0,8-8.41,8H46.9a5.86,5.86,0,0,1-4.49-2,8.21,8.21,0,0,1-2.19-6V18.9A7.23,7.23,0,0,1,42,13.66a6.28,6.28,0,0,1,4.72-1.84H65.34q7.78,0,7.78,7.09ZM65.74,35V17.69H47.53V35Z"/>
+      <path class="ld-1" d="M121,11.81l-7.37,29H103.54l-2.48-12.73a83.49,83.49,0,0,1-1-8.7H96.45a84,84,0,0,1-1,8.7L93,40.79H82.91l-7.37-29h6.86L85,23.68q.63,2.77,1.44,8.93h4q.63-6.86,1-8.93L93.8,11.81h9L105,23.68q.4,2.07,1,8.93h4q.81-6.16,1.38-8.93l2.65-11.87Z"/>
+      <path class="ld-1" d="M151.82,40.79h-8.35V.63h8.35Z"/>
+      <path class="ld-1" d="M189.1,32.78q0,8-8.41,8h-17.8a5.86,5.86,0,0,1-4.49-2,8.21,8.21,0,0,1-2.19-6V18.9A7.23,7.23,0,0,1,158,13.66a6.28,6.28,0,0,1,4.72-1.84h18.61q7.78,0,7.78,7.09ZM181.72,35V17.69H163.52V35Z"/>
+      <path class="ld-1" d="M227.76,40.79h-5.65q-4.67,0-5.7-3.69-1.44,3.69-5.76,3.69H199q-7.2,0-7.2-7.55V19.47q0-7.66,7.2-7.66h12q4.55,0,5.93,4v-4h8.3V35.32h2.48ZM217,35V17.69H199.3V35Z"/>
+      <path class="ld-1" d="M265.79,40.79h-5.65q-4.67,0-5.76-3.69-1.38,3.69-5.7,3.69H237q-7.2,0-7.2-7.55V20.63q0-7.61,7.2-7.61h12q4.61,0,6,4V.63h8.3V34.34h2.48ZM255,35V18.84H237.32V35Z"/>
+      <path class="ld-1" d="M279.1,5.13h-8.35V0h8.35Zm0,35.67h-8.35V12.85h8.35Z"/>
+      <path class="ld-1" d="M320.7,40.79h-3.92q-3.75,0-5.07-1.38T310.44,34V17.69h-18.5V40.85h-7.32v-29h7.32v4.55a6.54,6.54,0,0,1,6.57-4.55h10.72q8.64,0,8.64,8.87V34.92h2.82Z"/>
+      <path class="ld-1" d="M357.11,40.45q0,5.65-1.84,7.66t-7,2H337.23V45.52h12.33v-9l-1.5-.29q-1.27,3.57-4.55,3.57H331.64q-7.2,0-7.2-7.61V19.47q0-7.66,7.2-7.66h12q4.55,0,5.93,4v-4h7.49Zm-7.49-6.63V17.69H331.87V33.82Z"/>
+      <path class="ld-1" d="M359.82,33.71h8.47v8.53h-8.47Z"/>
+      <path class="ld-1" d="M371.57,33.71H380v8.53h-8.47Z"/>
+      <path class="ld-1" d="M383.33,33.71h8.47v8.53h-8.47Z"/>
+    </g>
+  </g>
+  <g id="blue-bar" data-name="Layer 2">
+    <rect class="ld-2" y="55" width="80" height="5"/>
+  </g>
+</svg>
 
+
+</div>
+
+<!--INTRO STAGE 2: video background-->
 <div class="video-container">
 
-<video autoplay="true" loop="loop">
-<source src="{{asset "video/forest.webm"}}" type="video/webm"/>
+<video preload="auto" loop="loop" id="landing-bg">
+<!--<source src="{{asset "video/hispeed.webm"}}" type="video/webm"/>-->
 </video>
 
 <svg id='image' version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -21,24 +60,44 @@
 <feFuncB type="table" tableValues="1 0"/>
 </feComponentTransfer>
 </filter>
+
+<filter id="noir">
+<feGaussianBlur stdDeviation="1.5"/>
+<feComponentTransfer>
+<feFuncR type="discrete" tableValues="120 0.5 1 1"/>
+<feFuncG type="discrete" tableValues="200 0.5 1"/>
+<feFuncB type="discrete" tableValues="255 0.5 1"/>
+</feComponentTransfer>
+</filter>
+
+<filter id="blurEffect">
+<feGaussianBlur stdDeviation="1"/>
+</filter>
+
+<filter id="morpho-customize">
+ <feGaussianBlur operator="dilate" in="SourceGraphic" radius="5.00"/>
+</filter>
+
 </defs>
 </svg>
 </div>
 
+<!--INTRO STAGE 1: intro courtains-->
+<div class="title-slice s-alpha1"></div>
+<div class="title-slice s-alpha2"></div>
+<div class="title-slice s-alpha3"></div>
+<div class="title-slice alpha-slice"></div>
 
-<div class="slice1">
-    <div class="inner-bar-left delayed-closure"></div>
-</div>
-
-<div class="slice2">
-    <div class="inner-bar-right delayed-closure"></div>
-</div>
+<div class="title-slice top-slice"></div>
+<div class="title-slice bottom-slice"></div>
 
 
+<!--INTRO STAGE 3: main logo visual and START button-->
 <div class="logo-wrapper">
   
     <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1411.62 369.73">
     <defs>
+
       <mask id="mask">
 		<circle r="10" cx="100" cy="100"
 					 class="c-mask-circle"/>
@@ -68,13 +127,63 @@
 </div>
 
 
-<div class="start-wrapper"><h1>PRESS THE START BUTTON</h1></div>
-<div class="copy-wrapper">Licensed by MOGURA Copyright 2000-2017 Nei Visual Softworks</div>
+<div class="start-wrapper">
+    
+    <svg id="start-caption" data-name="startcaption" xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 1450 100">
+
+ <defs>
+      <!-- We set the filter effect area to be really big to guarantee we see it all... -->
+      <filter id="blue-glow" x="-5000%" y="-5000%" width="10000%" height="10000%">
+          <feFlood result="flood" flood-color="#00baff" flood-opacity="1"></feFlood>
+          <feComposite in="flood" result="mask" in2="SourceGraphic" operator="in"></feComposite>
+          <feMorphology in="mask" result="dilated" operator="dilate" radius="4"></feMorphology>
+          <feGaussianBlur in="dilated" result="blurred" stdDeviation="12"></feGaussianBlur>
+          <feMerge>
+              <feMergeNode in="blurred"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+      </filter>
+      <filter id="pink-glow" x="-5000%" y="-5000%" width="10000%" height="10000%">
+          <feFlood result="flood" flood-color="#ff2cd0" flood-opacity="1"></feFlood>
+          <feComposite in="flood" result="mask" in2="SourceGraphic" operator="in"></feComposite>
+          <feMorphology in="mask" result="dilated" operator="dilate" radius="4"></feMorphology>
+          <feGaussianBlur in="dilated" result="blurred" stdDeviation="12"></feGaussianBlur>
+          <feMerge>
+              <feMergeNode in="blurred"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+      </filter>
+    </defs>
+
+  <g>
+    <path d="M64.86,26.77q0,4.36-2.73,6.47t-8.74,2h-37V53.61H0V0H52.73q6.67,0,9.4,2T64.86,9.1ZM48.22,25.72V11H16V25.72Z"/>
+    <path d="M134.41,53.61H118.53v-21H85.06v21H69V0h51q8,0,11.19,2.11t3.2,6.84v7.59q0,3.76-1.13,5.41-2.16,3-8.83,4.51,6.67,1.35,8.83,4.51a10.56,10.56,0,0,1,1.13,5.49ZM118.34,23.08V11H85.06V23.08Z"/>
+    <path d="M196.54,11H155.18V22h41.17v9.47H155.18v11.2h41.08v11H138.55V0h58Z"/>
+    <path d="M265.35,46q0,7.6-13.07,7.59H198.89V42.56h50.76V31.66H214.4q-7.52,0-11-1.88a7.18,7.18,0,0,1-3.95-6.84V8.5a6.86,6.86,0,0,1,4.23-6.62Q207.82,0,218.54,0h42V11H215.34V22.11H252q13.35,0,13.35,9.25Z"/>
+    <path d="M334,46q0,7.6-13.07,7.59H267.51V42.56h50.76V31.66H283q-7.52,0-11-1.88a7.18,7.18,0,0,1-3.95-6.84V8.5a6.86,6.86,0,0,1,4.23-6.62Q276.44,0,287.15,0h42V11H284V22.11h36.66q13.35,0,13.35,9.25Z"/>
+    <path d="M431.81,11H408.69V53.61H391V11H367V0h64.86Z"/>
+    <path d="M503.81,53.61H487.17V30.68H452V53.61H435.47V0H452V21.13h35.15V0h16.64Z"/>
+    <path d="M567.72,11H526.37V22h41.17v9.47H526.37v11.2h41.08v11H509.73V0h58Z"/>
+    <path d="M667.83,46q0,7.6-13.07,7.59H601.37V42.56h50.76V31.66H616.88q-7.52,0-11-1.88a7.18,7.18,0,0,1-3.95-6.84V8.5a6.86,6.86,0,0,1,4.23-6.62Q610.3,0,621,0h42V11H617.82V22.11h36.66q13.35,0,13.35,9.25Z"/>
+    <path d="M734.38,11H711.25V53.61H693.58V11H669.52V0h64.86Z"/>
+    <path d="M803,53.61H786.73V30.23H751.86V53.61H735.6V9.17Q735.6,0,749.13,0h40.51Q803,0,803,9.17ZM786.73,22.78V11H751.86V22.78Z"/>
+    <path d="M872.08,53.61H856.19v-21H822.73v21H806.66V0h51q8,0,11.19,2.11t3.2,6.84v7.59q0,3.76-1.13,5.41-2.16,3-8.83,4.51,6.67,1.35,8.83,4.51a10.56,10.56,0,0,1,1.13,5.49ZM856,23.08V11H822.73V23.08Z"/>
+    <path d="M938.62,11H915.5V53.61H897.83V11H873.77V0h64.86Z"/>
+    <path d="M1041.08,43.31q0,5.57-2.91,8t-9.68,2.33H973.59V0h55.17q6.86,0,9.59,2t2.73,6.69v8.42q0,5.49-7.52,9,4.89,1.05,6.58,3.61.94,1.51.94,5.11ZM1025,22.78V11H989.76V22.78Zm0,19.85V30.23H989.76V42.64Z"/>
+    <path d="M1112.51,44.52q0,9.1-13.35,9.1h-40.61q-6.58,0-10.06-2.48a7.8,7.8,0,0,1-3.38-6.62V0h16.36V42.64h34.87V0h16.17Z"/>
+    <path d="M1180.85,11h-23.12V53.61h-17.67V11H1116V0h64.86Z"/>
+    <path d="M1246.92,11H1223.8V53.61h-17.67V11h-24.06V0h64.86Z"/>
+    <path d="M1315.73,40.61q0,6.77-3.67,9.93t-11.28,3.08H1264.6q-14.95,0-14.95-13V13q0-6.92,3.67-10t11.28-3h36.19q7.9,0,11.47,3t3.48,10Zm-16.26,2V11H1266.1V42.64Z"/>
+    <path d="M1388.86,53.61h-17l-27.63-32.56a21.11,21.11,0,0,1-2.26-3.38q-1.69-3.16-1.88-3.46l-5.92,2a58.09,58.09,0,0,1,1.79,11.2V53.61H1320.8V0h23.69l20,23.76q0,.08,4.89,7.52l6-1.58a35.46,35.46,0,0,1-1.79-10.08V0h15.23Z"/>
+  </g>
+</svg>
+
+</div>
+<div class="copy-wrapper">Licensed by MOGURA, Copyright 2000-2017 Nei Visual Softworks, (C) SEGA</div>
 
 
 
 </div>
-
 
 
 

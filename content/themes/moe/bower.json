@@ -5,6 +5,7 @@
     "highlightjs": "^9.6.0",
     "packery": "^2.1.1",
     "slick-carousel": "^1.6.0",
-    "gsap": "^1.19.1"
+    "gsap": "^1.19.1",
+    "masonry": "^4.1.1"
   }
 }

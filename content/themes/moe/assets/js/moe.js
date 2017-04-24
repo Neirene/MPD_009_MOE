@@ -2,44 +2,72 @@
  * Main JS file for Casper behaviours
  */
 
+
+/**
+ * DEBUG STUFF
+ */
+
+
+/*
+List of classes triggers to use....
+$(".loading-screen").addClass("section-loaded");
+$(".title-slice").addClass("opened-slices");
+$(".video-container").addClass("display-video");
+
+*/
+
+
+
+
+
 /* globals jQuery, document */
 (function ($, undefined) {
     "use strict";
-    console.log("theme settings initialized...");
-
-    /*$('.slick-container').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 1000,
-    });
-
-/*
-var tl = new TimelineMax({repeat: -1});
-tl.to(".logo-bg-stripe", 2200, {
-    backgroundPosition: "600px 0px",
-    force3D:true,
-    rotation:0.00,
-    z:0.00,
-    autoRound:false,
-    ease: Linear.easeNone
-    });
-*/
-
 
     var $document = $(document);
 
     $document.ready(function () {
+        
+        if(window.location.pathname != "/landing/") {
 
-        var $postContent = $(".post-content");
-        $postContent.fitVids();
+            console.log("the last saved sessionstorage value is: " + sessionStorage.getItem('introSkip'));
+            //sessionStorage.clear(); for DEBUG onry
 
-        $(".scroll-down").arctic_scroll();
+            var $postContent = $(".post-content");
+            $postContent.fitVids();
 
-        $(".menu-button, .nav-cover, .nav-close").on("click", function(e){
-            e.preventDefault();
-            $("body").toggleClass("nav-opened nav-closed");
-        });
+            $(".scroll-down").arctic_scroll();
+
+            $(".menu-button, .nav-cover, .nav-close").on("click", function(e){
+                e.preventDefault();
+                $("body").toggleClass("nav-opened nav-closed");
+            });
+
+            //custom stuff 
+
+            for(var i = 0;i<$("article h2 a").length;i++){
+
+                var linkStr = $('article h2 a:eq("'+i+'")').attr("href");
+
+                if(linkStr.match("-lg") != null) {
+                    //console.log("one of the links includes the keyword!");
+                    $('article:eq("'+i+'")').addClass("grid-element-lg");
+
+                }else if(linkStr.match("-md") != null){
+                    //console.log("one of the links includes the keyword!");
+                    $('article:eq("'+i+'")').addClass("grid-element-md");
+                    
+                }else if(linkStr.match("-sm") != null) {
+                    //console.log("one of the links includes the keyword!");
+                    $('article:eq("'+i+'")').addClass("grid-element-sm");
+
+                }else{
+                    console.log("OUT OF LUCK!");
+                }
+                
+            }
+
+        }
 
     });
 

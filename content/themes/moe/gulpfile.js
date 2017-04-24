@@ -31,17 +31,16 @@ var banner = [
 var files = {
     lint: ['gulpfile.js',
           'package.json',
-          'assets/js/moe.js'
+          'assets/js/moe.js',
+          'assets/js/landing.js'
           ],
     sass: ['assets/sass/**/*.scss'],
-    css:  ['assets/bower_components/highlightjs/styles/railscasts.css',
-           'assets/css/compiled_sass.css'
-          ],
-    js:   ['assets/bower_components/highlightjs/highlight.pack.js',
-           'assets/bower_components/packery/dist/packery.pkgd.min.js',
+    css:  ['assets/css/compiled_sass.css'],
+    js:   ['assets/bower_components/masonry/dist/masonry.pkgd.min.js',
            'assets/bower_components/slick-carousel/slick/slick.min.js',
            'assets/vendor/js/jquery.fitvids.js',
-           'assets/js/moe.js'
+           'assets/js/moe.js',
+           'assets/js/landing.js'
            ],
     images:['image_sources/{,*/}*.jpg',
             'image_sources/{,*/}*.png'
